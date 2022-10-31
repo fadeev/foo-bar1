@@ -1,0 +1,14 @@
+syntax = "proto3";
+package fadeev.foobar1.foobar1;
+
+import "gogoproto/gogo.proto";
+import "foobar1/foobar1/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/fadeev/foo-bar1/x/foobar1/types";
+
+// GenesisState defines the foobar1 module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
